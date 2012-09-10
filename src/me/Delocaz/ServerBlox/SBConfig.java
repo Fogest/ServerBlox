@@ -11,7 +11,7 @@ public class SBConfig extends YamlConfiguration {
 	File f;
 	public SBConfig(String name) {
 		f = new File("plugins/ServerBlox/"+name+".yml");
-		f.mkdirs();
+		f.getParentFile().mkdirs();
 		try {
 			f.createNewFile();
 		} catch (IOException e) {

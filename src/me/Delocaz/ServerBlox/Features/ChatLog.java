@@ -22,9 +22,10 @@ public class ChatLog extends SBFeature {
 	@EventHandler
 	public void onPlayerChat(AsyncPlayerChatEvent e) {
 		try {
-			FileWriter fw = new FileWriter(new File("plugins/ServerBlox/chat.log"));
+			FileWriter fw = new FileWriter(new File("plugins/ServerBlox/chat.log"), true);
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write("["+new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date(System.currentTimeMillis()))+"] <"+e.getPlayer().getName()+"> "+e.getMessage());
+			bw.newLine();
 			bw.close();
 		} catch (IOException e1) {
 			e1.printStackTrace();

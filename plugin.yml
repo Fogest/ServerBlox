@@ -2,3 +2,8 @@ name: ServerBlox
 author: Delocaz
 main: me.Delocaz.ServerBlox.ServerBlox
 version: 1.0
+commands:
+    home:
+        aliases: [sbx_home]
+    sethome:
+        aliases: [sbx_sethome]
