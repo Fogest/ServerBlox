@@ -7,7 +7,7 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-public class SBCmd implements CommandExecutor, Listener {
+public class SBCmd extends SBBase implements CommandExecutor, Listener {
 	String perm = "";
 	String cmd = "";
 	public SBLang lng;

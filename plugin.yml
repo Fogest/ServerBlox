@@ -3,7 +3,15 @@ author: Delocaz
 main: me.Delocaz.ServerBlox.ServerBlox
 version: 1.0
 commands:
-    home:
-        aliases: [sbx_home]
-    sethome:
-        aliases: [sbx_sethome]
+    sbx_home:
+        aliases: [home]
+    sbx_sethome:
+        aliases: [sethome]
+    sbx_spawn:
+        aliases: [spawn]
+    sbx_setspawn:
+        aliases: [setspawn]
+    sbx_tp:
+        aliases: [tp, teleport, tele]
+    spx_tp2p:
+        aliases: [tp2p, t2p, p2p]
