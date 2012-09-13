@@ -14,6 +14,7 @@ import me.Delocaz.ServerBlox.Commands.Tp;
 import me.Delocaz.ServerBlox.Commands.Tp2p;
 import me.Delocaz.ServerBlox.Commands.TpHere;
 import me.Delocaz.ServerBlox.Commands.Warp;
+import me.Delocaz.ServerBlox.Features.ChatColor;
 import me.Delocaz.ServerBlox.Features.ChatLog;
 import me.Delocaz.ServerBlox.Features.CommandLog;
 
@@ -37,6 +38,7 @@ public class SBCommandRegistrator {
 		r.add(new Time("time", "serverblox.time.set", sb));
 		r.add(new CommandLog("CommandLog"));
 		r.add(new ChatLog("ChatLog"));
+		r.add(new ChatColor("ChatColor"));
 		for (SBBase b : r) {
 			register(b);
 		}
