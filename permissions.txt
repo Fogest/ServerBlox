@@ -1,0 +1,11 @@
+serverblox.chat.color
+serverblox.home.tp
+serverblox.home.set
+serverblox.spawn.tp
+serverblox.spawn.set
+serverblox.warp.tp
+serverblox.warp.set
+serverblox.tp.to
+serverblox.tp.other
+serverblox.tp.here
+serverblox.time.set
