@@ -11,6 +11,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class ChatLog extends SBFeature {
+	public ChatLog(String string) {
+		super(string);
+	}
 	public void init() {
 		File f = new File("plugins/ServerBlox/chat.log");
 		try {

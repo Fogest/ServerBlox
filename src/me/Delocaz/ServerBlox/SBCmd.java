@@ -1,5 +1,7 @@
 package me.Delocaz.ServerBlox;
 
+import java.util.List;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,12 +15,14 @@ public class SBCmd extends SBBase implements CommandExecutor, Listener {
 	public SBLang lng;
 	public SBPlayerData spd;
 	public ServerBlox sb;
+	public SBConfig cfg;
 	public SBCmd(String cmd, String perm, ServerBlox sb) {
 		this.cmd = cmd;
 		this.perm = perm;
 		this.sb = sb;
 		spd = sb.spd;
 		lng = sb.lng;
+		cfg = new SBConfig("config");
 	}
 	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
 		if (arg0 instanceof Player) {
@@ -46,5 +50,9 @@ public class SBCmd extends SBBase implements CommandExecutor, Listener {
 	}
 	public Object getPlayerData(Player p, String n) {
 		return spd.get(p, n);
+	}
+	public Player matchPlayer(String s) {
+		List<Player> m = sb.getServer().matchPlayer(s);
+		return m.isEmpty() ? null : m.get(0);
 	}
 }

@@ -1,4 +1,1 @@
-//tp command
-//tp2p command
-
 //help system

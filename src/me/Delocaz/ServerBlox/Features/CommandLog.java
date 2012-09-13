@@ -11,6 +11,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
 public class CommandLog extends SBFeature {
+	public CommandLog(String string) {
+		super(string);
+	}
 	public void init() {
 		File f = new File("plugins/ServerBlox/command.log");
 		try {

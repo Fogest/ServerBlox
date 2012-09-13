@@ -7,6 +7,19 @@ public class SBLang {
 	public String noPerms;                                               
 	public String noHome;
 	public String homeTp;
+	public String warpSet;
+	public String noWarp;
+	public String warpTp;
+	public String noMatch;
+	public String tpTo;
+	public String tp2p;
+	public String nickOff;
+	public String nickSet;
+	public String tpHere;
+	public String wrongArgs;
+	public String spawnSet;
+	public String spawnTp;
+	public String timeSet;
 	public SBLang() {                                                    
 		lngf = new SBConfig("lang");                                     
 		lngf.addDefault("noConsole", "&cSorry, this command is for players only.");
@@ -14,6 +27,19 @@ public class SBLang {
 		lngf.addDefault("noPerms", "&cSorry, you don't have permission."); 
 		lngf.addDefault("noHome", "&cSorry, you haven't defined a home yet!"); 
 		lngf.addDefault("homeTp", "&aYou have been teleported to your home!");
+		lngf.addDefault("warpSet", "&aYour warp has been set!");
+		lngf.addDefault("noWarp", "&cSorry, you haven't defined that warp yet!");
+		lngf.addDefault("warpTp", "&aYou have been teleported to your warp!");
+		lngf.addDefault("noMatch", "&aNo player matched %player!");
+		lngf.addDefault("tpTo", "&aYou have been teleported to %player!");
+		lngf.addDefault("tp2p", "&%player1 have been teleported to %player2!");
+		lngf.addDefault("nickOff", "&aYour nick has been turned off!");
+		lngf.addDefault("nickSet", "&aYour nick has been set as %nick!");
+		lngf.addDefault("tpHere", "&a%player have been teleported to you!");
+		lngf.addDefault("wrongArgs", "&cSorry, you have entered the wrong arguments!");
+		lngf.addDefault("spawnSet", "&aYou have set the spawn!");
+		lngf.addDefault("spawnTp", "&aYou have been teleported to the spawn!");
+		lngf.addDefault("timeSet", "&aYou have set the time to %time!");
 		lngf.options().copyDefaults(true);
 		lngf.save();
 		noConsole = SBUtils.colorize(lngf.getString("noConsole"));
@@ -21,5 +47,17 @@ public class SBLang {
 		noPerms = SBUtils.colorize(lngf.getString("noPerms"));
 		noHome = SBUtils.colorize(lngf.getString("noHome"));
 		homeTp = SBUtils.colorize(lngf.getString("homeTp"));
+		warpSet = SBUtils.colorize(lngf.getString("warpSet"));
+		noWarp = SBUtils.colorize(lngf.getString("noWarp"));
+		warpTp = SBUtils.colorize(lngf.getString("warpTp"));
+		tpTo = SBUtils.colorize(lngf.getString("tpTo"));
+		tp2p = SBUtils.colorize(lngf.getString("tp2p"));
+		nickOff = SBUtils.colorize(lngf.getString("nickOff"));
+		nickSet = SBUtils.colorize(lngf.getString("nickSet"));
+		tpHere = SBUtils.colorize(lngf.getString("tpHere"));
+		wrongArgs = SBUtils.colorize(lngf.getString("wrongArgs"));
+		spawnSet = SBUtils.colorize(lngf.getString("spawnSet"));
+		spawnTp = SBUtils.colorize(lngf.getString("spawnTp"));
+		timeSet = SBUtils.colorize(lngf.getString("timeSet"));
 	}                                                                    
 }                                                                        

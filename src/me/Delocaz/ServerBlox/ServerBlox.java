@@ -19,7 +19,7 @@ public class ServerBlox extends JavaPlugin {
 		 new SBCommandRegistrator(this).register();
 	}
 	public void regCmd(SBCmd s) {
-		getCommand(s.cmd).setExecutor(s);
+		getCommand("sbx_"+s.cmd).setExecutor(s);
 		getServer().getPluginManager().registerEvents(s, this);
 	}
 	public void regFeat(SBFeature s) {

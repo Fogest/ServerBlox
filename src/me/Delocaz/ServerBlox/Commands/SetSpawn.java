@@ -13,5 +13,6 @@ public class SetSpawn extends SBCmd {
 	public void player(Player p, String[] args) {
 		Location l = p.getLocation();
 		l.getWorld().setSpawnLocation(l.getBlockX(), l.getBlockY(), l.getBlockZ());
+		p.sendMessage(lng.spawnSet);
 	}
 }

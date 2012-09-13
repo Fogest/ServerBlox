@@ -10,8 +10,18 @@ commands:
     sbx_spawn:
         aliases: [spawn]
     sbx_setspawn:
-        aliases: [setspawn]
+        aliases: [setspawn, spawnset]
     sbx_tp:
         aliases: [tp, teleport, tele]
-    spx_tp2p:
+    sbx_tp2p:
         aliases: [tp2p, t2p, p2p]
+    sbx_warp:
+        aliases: [warp, wp]
+    sbx_setwarp:
+        aliases: [setwarp, swp]
+    sbx_nick:
+        aliases: [nick]
+    sbx_tphere:
+        aliases: [tphere, summon, s]
+    sbx_time:
+        aliases: [time, settime, day, timeset]

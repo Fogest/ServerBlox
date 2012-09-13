@@ -11,5 +11,6 @@ public class Spawn extends SBCmd {
 	}
 	public void player(Player p, String[] args) {
 		p.teleport(p.getWorld().getSpawnLocation());
+		p.sendMessage(lng.spawnTp);
 	}
 }
