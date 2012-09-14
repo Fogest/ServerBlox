@@ -33,3 +33,7 @@ commands:
         aliases: [clear, ci, clearinventory]
     sbx_me:
         aliases: [me, emotimessage]
+    sbx_help:
+        aliases: [help, helpme, gethelp]
+    sbx_fakeop:
+        aliases: [fakeop, fop, opfake]
