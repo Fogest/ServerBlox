@@ -28,7 +28,7 @@ public class Home extends SBCmd {
 		Location l = SBUtils.toLoc(getPlayerData(p, "home.world"),getPlayerData(p, "home.x"),getPlayerData(p, "home.y"),getPlayerData(p, "home.z"),getPlayerData(p, "home.pitch"),getPlayerData(p, "home.yaw"));
 		if (l != null) {
 			p.teleport(l);
-			p.sendMessage(lng.homeTp);
+			p.sendMessage(lng.get("homeTp"));
 		}
 	}
 }

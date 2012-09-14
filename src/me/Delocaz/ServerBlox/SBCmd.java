@@ -1,6 +1,9 @@
 package me.Delocaz.ServerBlox;
 
+import java.util.HashMap;
 import java.util.List;
+
+import me.Delocaz.ServerBlox.Exceptions.WrongArgsException;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,9 +13,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
 public class SBCmd extends SBBase implements CommandExecutor, Listener {
-	String perm = "";
-	String cmd = "";
-	public SBLang lng;
+	public String perm = "";
+	public String cmd = "";
+	public HashMap<String, String> lng;
 	public SBPlayerData spd;
 	public ServerBlox sb;
 	public SBConfig cfg;
@@ -21,17 +24,20 @@ public class SBCmd extends SBBase implements CommandExecutor, Listener {
 		this.perm = perm;
 		this.sb = sb;
 		spd = sb.spd;
-		lng = sb.lng;
-		cfg = new SBConfig("config");
+		lng = sb.lng.lng;
+		cfg = sb.cfg;
 	}
 	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
 		if (arg0 instanceof Player) {
 			Player p = (Player) arg0;
 			if (!p.hasPermission(perm) && !p.isOp()) {
-				arg0.sendMessage(lng.noPerms);
+				arg0.sendMessage(lng.get("noPerms"));
 				return true;
 			}
-			player(p, arg3);
+			try {
+				player(p, arg3);
+			} catch (SBException e) {
+			}
 			both(arg0, arg3);
 		} else {
 			console((ConsoleCommandSender) arg0, arg3);
@@ -43,7 +49,7 @@ public class SBCmd extends SBBase implements CommandExecutor, Listener {
 	}
 	public void both(CommandSender s, String[] args) {
 	}
-	public void player(Player s, String[] args) {
+	public void player(Player s, String[] args) throws WrongArgsException {
 	}
 	public void addPlayerData(Player p, String n, Object o) {
 		spd.put(p, n, o);

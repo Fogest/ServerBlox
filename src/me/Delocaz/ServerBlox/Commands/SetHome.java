@@ -18,6 +18,6 @@ public class SetHome extends SBCmd {
 		addPlayerData(p, "home.pitch", l.getPitch());
 		addPlayerData(p, "home.yaw", l.getYaw());
 		addPlayerData(p, "home.world", l.getWorld().getName());
-		p.sendMessage(lng.homeSet);
+		p.sendMessage(lng.get("homeSet"));
 	}
 }

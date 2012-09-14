@@ -42,8 +42,7 @@ public class Time extends SBCmd {
 				try {
 					i = Integer.parseInt(args[0]);
 				} catch (Exception e) {
-					p.sendMessage(lng.wrongArgs);
-					return;
+					i = 500;
 				}
 				txtTime = i+"";
 			}
@@ -52,6 +51,6 @@ public class Time extends SBCmd {
 			txtTime = "day";
 		}
 		p.getWorld().setTime(time);
-		p.sendMessage(lng.timeSet.replaceAll("%time", txtTime));
+		p.sendMessage(lng.get("timeSet").replaceAll("%time", txtTime));
 	}
 }

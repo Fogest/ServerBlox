@@ -3,6 +3,7 @@ package me.Delocaz.ServerBlox.Commands;
 import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
+import me.Delocaz.ServerBlox.SBUtils;
 import me.Delocaz.ServerBlox.ServerBlox;
 
 public class Nick extends SBCmd {
@@ -12,10 +13,11 @@ public class Nick extends SBCmd {
 	public void player(Player p, String[] args) {
 		if (args.length == 0) {
 			p.setDisplayName(p.getName());
-			p.sendMessage(lng.nickOff);
+			p.sendMessage(lng.get("nickOff"));
 		} else {
 			p.setDisplayName(args[0]);
-			p.sendMessage(lng.nickSet.replaceAll("&nick", args[0]));
+			p.setPlayerListName(args[0]);
+			p.sendMessage(lng.get("nickSet").replaceAll("%nick", SBUtils.colorize(args[0])));
 		}
 	}
 }

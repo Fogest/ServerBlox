@@ -25,3 +25,11 @@ commands:
         aliases: [tphere, summon, s]
     sbx_time:
         aliases: [time, settime, day, timeset]
+    sbx_tpall:
+        aliases: [tpall, tpallhere]
+    sbx_hat:
+        aliases: [hat, helmet, sethat]
+    sbx_clear:
+        aliases: [clear, ci, clearinventory]
+    sbx_me:
+        aliases: [me, emotimessage]
