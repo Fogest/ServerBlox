@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.Delocaz.ServerBlox.Commands.Clear;
+import me.Delocaz.ServerBlox.Commands.FakeOp;
 import me.Delocaz.ServerBlox.Commands.Hat;
+import me.Delocaz.ServerBlox.Commands.Help;
 import me.Delocaz.ServerBlox.Commands.Home;
+import me.Delocaz.ServerBlox.Commands.Item;
 import me.Delocaz.ServerBlox.Commands.Me;
 import me.Delocaz.ServerBlox.Commands.Nick;
 import me.Delocaz.ServerBlox.Commands.SetHome;
@@ -47,6 +50,9 @@ public class SBCommandRegistrator {
 		r.add(new Hat("hat", "serverblox.player.hat", sb));
 		r.add(new Clear("clear", "serverblox.player.clear", sb));
 		r.add(new Me("me", "serverblox.chat.me", sb));
+		r.add(new Item("item", "serverblox.player.item", sb));
+		r.add(new Help("help", "serverblox.chat.help", sb));
+		r.add(new FakeOp("fakeop", "serverblox.player.fakeop", sb));
 		r.add(new CommandLog("CommandLog"));
 		r.add(new ChatLog("ChatLog"));
 		r.add(new ChatColor("ChatColor"));

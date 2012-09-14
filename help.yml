@@ -52,3 +52,6 @@ tphere:
 warp:
     desc: 'Teleports you to a warp.'
     usage: '/warp <warp>'
+fakeop:
+    desc: 'Sends a fake "You are now OP!" message to a player.'
+    usage: '/fakeop <player>'
