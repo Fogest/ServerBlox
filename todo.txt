@@ -1,7 +1,2 @@
-//afk
-//me
-//item
 //sudo
 //fakeop
-
-//help system

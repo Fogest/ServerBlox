@@ -18,14 +18,14 @@ public class Help extends SBCmd {
 		if (args.length == 0) {
 			for (SBCmd cmd : sb.scr.cmds) {
 				if (p.hasPermission(cmd.perm)) {
-					String des = hlp.getString(cmd.cmd+".description");
+					String des = hlp.getDesc(cmd.cmd);
 					p.sendMessage(SBUtils.colorize("&c/"+cmd.cmd+" - "+des.replaceAll(" (.*", "")));
 				}
 			}
 			p.sendMessage(lng.get("cmdInfo"));
 		} else {
-			String des = hlp.getString(args[0]+".description");
-			String usa = hlp.getString(args[0]+".usage");
+			String des = hlp.getDesc(args[0]);
+			String usa = hlp.getUsage(args[0]);
 			if (des == null || usa == null) {
 				throw new WrongArgsException(p, this, lng.get("badCommand"));
 			}
