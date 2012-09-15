@@ -8,8 +8,8 @@ public class SBLang {
 	public SBConfig lngf;                                                
 	public HashMap<String, String> lng = new HashMap<String, String>();
 	public SBLang() {                                                    
-		lngf = new SBConfig("lang");                                     
-		lngf.addDefaults(YamlConfiguration.loadConfiguration(getClass().getResourceAsStream("/lang.yml")));
+		lngf = new SBConfig("lang");         
+		lngf.addDefaults(YamlConfiguration.loadConfiguration(getClass().getResourceAsStream("lang.yml")));
 		lngf.options().copyDefaults(true);
 		lngf.save();
 		int i = 0;
@@ -17,6 +17,7 @@ public class SBLang {
 			lng.put(s, lngf.getString(s));
 			i++;
 		}
+		System.out.println(lng.get("langReg"));
 		SBUtils.console(lng.get("langReg").replace("%amount", i+""));
 	}
 }                                                                        

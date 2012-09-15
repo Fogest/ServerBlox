@@ -14,7 +14,7 @@ public class SBHelp extends SBConfig {
 	}
 	public SBHelp() {                                                    
 		super("help");                                     
-		addDefaults(YamlConfiguration.loadConfiguration(getClass().getResourceAsStream("/help.yml")));
+		addDefaults(YamlConfiguration.loadConfiguration(getClass().getResourceAsStream("res/help.yml")));
 		options().copyDefaults(true);
 		save();
 	}
