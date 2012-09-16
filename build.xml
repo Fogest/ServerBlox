@@ -27,12 +27,15 @@
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
     <target depends="build" name="jar">
-        <jar destfile="../ServerBlox.jar" basedir="."/>
+    	<move file="plugin.yml" todir="build"/>
+    	<move file="lang.yml" todir="build"/>
+    	<move file="help.yml" todir="build"/>
+        <jar destfile="ServerBlox.jar" basedir="build"/>
     </target>
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="." includeantruntime="false" source="${source}" target="${target}">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
             <classpath refid="ServerBlox.classpath"/>
         </javac>
