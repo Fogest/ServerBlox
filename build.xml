@@ -14,7 +14,7 @@
         <pathelement location="../libs/odditem.jar"/>
     </path>
     <target name="init" depends="clean">
-        <mkdir dir="bin"/>
+        <mkdir dir="build"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
                 <exclude name="**/*.java"/>
