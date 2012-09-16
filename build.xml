@@ -13,7 +13,7 @@
         <pathelement location="../libs/craftbukkit.jar"/>
         <pathelement location="../libs/odditem.jar"/>
     </path>
-    <target name="init">
+    <target name="init" depends="clean">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
