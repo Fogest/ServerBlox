@@ -3,12 +3,11 @@ package me.Delocaz.ServerBlox.Commands;
 import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
-import me.Delocaz.ServerBlox.ServerBlox;
 import me.Delocaz.ServerBlox.Exceptions.WrongArgsException;
 
 public class FakeOp extends SBCmd {
-	public FakeOp(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public FakeOp(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) throws WrongArgsException {
 		if (args.length == 0) {

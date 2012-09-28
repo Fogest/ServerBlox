@@ -3,12 +3,11 @@ package me.Delocaz.ServerBlox.Commands;
 import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
-import me.Delocaz.ServerBlox.ServerBlox;
 import me.Delocaz.ServerBlox.Exceptions.WrongArgsException;
 
 public class Tp extends SBCmd {
-	public Tp(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public Tp(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) throws WrongArgsException {
 		if (args.length == 0) {

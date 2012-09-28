@@ -6,8 +6,8 @@ import org.bukkit.entity.Player;
 import me.Delocaz.ServerBlox.SBCmd;
 
 public class ServerBlox extends SBCmd {
-	public ServerBlox(String cmd, String perm, me.Delocaz.ServerBlox.ServerBlox sb) {
-		super(cmd, perm, sb);
+	public ServerBlox(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) {
 		if (args.length == 0) {

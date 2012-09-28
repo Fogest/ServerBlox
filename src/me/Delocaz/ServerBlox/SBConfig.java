@@ -5,9 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.bukkit.configuration.InvalidConfigurationException;
-import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 
-public class SBConfig extends FileConfiguration {
+public class SBConfig extends YamlConfiguration {
 	File f;
 	public SBConfig(String name) {
 		f = new File("plugins/ServerBlox/"+name+".yml");
@@ -35,17 +35,5 @@ public class SBConfig extends FileConfiguration {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-	@Override
-	protected String buildHeader() {
-		return null;
-	}
-	@Override
-	public void loadFromString(String arg0)
-			throws InvalidConfigurationException {		
-	}
-	@Override
-	public String saveToString() {
-		return null;
 	}
 }

@@ -1,1 +1,1 @@
-wc -l `find src -type f`
+wc -m `find src -type f`

@@ -2,38 +2,105 @@ name: ServerBlox
 author: Delocaz
 main: me.Delocaz.ServerBlox.ServerBlox
 version: 1.0
+softdepend: [OddItem]
 commands:
     sbx_home:
         aliases: [home]
+        description: 'Teleports you to your home.'
+        usage: '/home'
+        permission: serverblox.tp.home
     sbx_sethome:
         aliases: [sethome]
+        description: 'Sets your home to your current position.'
+        usage: '/sethome'
+        permission: serverblox.tp.sethome
     sbx_spawn:
         aliases: [spawn]
+        description: 'Teleports you to your current worlds spawn.'
+        usage: '/spawn'
+        permission: serverblox.tp.spawn
     sbx_setspawn:
         aliases: [setspawn, spawnset]
+        description: 'Sets your current world''s spawn to your current position.' 
+        usage: '/setspawn'
+        permission: serverblox.tp.setspawn
     sbx_tp:
         aliases: [tp, teleport, tele]
+        description: 'Teleports you to another player.'
+        usage: '/tp <player>'
+        permission: serverblox.tp.tp
     sbx_tp2p:
         aliases: [tp2p, t2p, p2p]
+        description: 'Teleports a player to another player.'
+        usage: '/tp2p <player1> <player2>'
+        permission: serverblox.tp.tp2p
     sbx_warp:
         aliases: [warp, wp]
+        description: 'Teleports you to a warp.'
+        usage: '/warp <warp>'
+        permission: serverblox.tp.warp
     sbx_setwarp:
         aliases: [setwarp, swp]
+        description: 'Sets a warp at your current position.'
+        usage: '/setwarp <warp>'
+        permission: serverblox.tp.setwarp
     sbx_nick:
-        aliases: [nick]
+        aliases: [nick, setnick, nickname]
+        description: 'Changes your nickname in chat and the player list. (Use with no parameters to reset)'
+        usage: '/nick [nickname]'
+        permission: serverblox.player.nick
     sbx_tphere:
         aliases: [tphere, summon, s]
+        description: 'Teleports a player to you.'
+        usage: '/tphere <player>'
+        permission: serverblox.tp.tphere
     sbx_time:
         aliases: [time, settime, day, timeset]
+        description: 'Changes your current world''s time. (Supports the usual keywords, use without arguments to turn day)'
+        usage: '/time [time]'
+        permission: serverblox.world.time
     sbx_tpall:
         aliases: [tpall, tpallhere]
+        description: 'Teleports everyone to you.'
+        usage: '/tpall'
+        permission: serverblox.player.tpall
     sbx_hat:
         aliases: [hat, helmet, sethat]
+        description: 'Puts the block in your hand on your head. (Only works with blocks, not items)'
+        usage: '/hat'
+        permission: serverblox.player.hat
     sbx_clear:
-        aliases: [clear, ci, clearinventory]
+        aliases: [clear, ci, clearinventory, clearinv]
+        description: 'Clears your inventory.'
+        usage: '/clear'
+        permission: serverblox.player.clear
     sbx_me:
         aliases: [me, emotimessage]
+        description: 'Broadcasts a first-person message to the server. (* <your name> <your message>)'
+        usage: '/me <message>'
+        permission: serverblox.chat.me
     sbx_help:
         aliases: [help, helpme, gethelp]
+        description: 'Gives you a short description of every command.'
+        usage: '/help [command]'
+        permission: serverblox.chat.help
     sbx_fakeop:
         aliases: [fakeop, fop, opfake]
+        description: 'Sends a fake "You are now OP!" message to a player.'
+        usage: '/fakeop <player>'
+        permission: serverblox.chat.fakeop
+    sbx_item:
+        aliases: [item, i, give, get]
+        description: 'Gives you an item.'
+        usage: '/item <item> [amount]'
+        permission: serverblox.player.item
+    sbx_serverblox:
+        aliases: [sbx, sb, serverblox]
+        description: 'Gives you general information about ServerBlox. (Use parameter "reload" to reload config)'
+        usage: '/serverblox [reload]'
+        permission: serverblox.sb
+    sbx_clearscreen:
+        aliases: [clearscreen, clears, cls]
+        description: 'Spams you empty messages, essentially clearing your chat.'
+        usage: '/clearscreen'
+        permission: serverblox.chat.clear

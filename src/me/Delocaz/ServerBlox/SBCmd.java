@@ -19,13 +19,8 @@ public class SBCmd extends SBBase implements CommandExecutor, Listener {
 	public SBPlayerData spd;
 	public ServerBlox sb;
 	public SBConfig cfg;
-	public SBCmd(String cmd, String perm, ServerBlox sb) {
+	public SBCmd(String cmd) {
 		this.cmd = cmd;
-		this.perm = perm;
-		this.sb = sb;
-		spd = sb.spd;
-		lng = sb.lng.lng;
-		cfg = sb.cfg;
 	}
 	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
 		if (arg0 instanceof Player) {
@@ -60,5 +55,14 @@ public class SBCmd extends SBBase implements CommandExecutor, Listener {
 	public Player matchPlayer(String s) {
 		List<Player> m = sb.getServer().matchPlayer(s);
 		return m.isEmpty() ? null : m.get(0);
+	}
+	public void setParent(ServerBlox sb) {
+		this.sb = sb;
+		spd = sb.spd;
+		lng = sb.lng.lng;
+		cfg = sb.cfg;
+	}
+	public void setPerm(String perm) {
+		this.perm = perm;
 	}
 }

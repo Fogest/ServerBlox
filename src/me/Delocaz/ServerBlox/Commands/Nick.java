@@ -4,11 +4,10 @@ import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
 import me.Delocaz.ServerBlox.SBUtils;
-import me.Delocaz.ServerBlox.ServerBlox;
 
 public class Nick extends SBCmd {
-	public Nick(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public Nick(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) {
 		if (args.length == 0) {

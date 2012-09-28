@@ -3,11 +3,10 @@ package me.Delocaz.ServerBlox.Commands;
 import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
-import me.Delocaz.ServerBlox.ServerBlox;
 
 public class TpAll extends SBCmd {
-	public TpAll(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public TpAll(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) {
 		for (Player pp : sb.getServer().getOnlinePlayers()) {

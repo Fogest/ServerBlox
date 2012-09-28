@@ -1,21 +1,20 @@
 package me.Delocaz.ServerBlox;
 
-import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.command.PluginCommand;
 
-public class SBHelp extends SBConfig {
-	public String getDesc(String s) {
+public class SBHelp {
+	public static String getDesc(String s) {
 		return getDescription(s);
 	}
-	public String getDescription(String s) {
-		return getString(s+".desc");
+	public static String getDescription(String s) {
+		PluginCommand cmd = getCmd(s);
+		return cmd == null ? null : cmd.getDescription();
 	}
-	public String getUsage(String s) {
-		return getString(s+".usage");
+	public static String getUsage(String s) {
+		PluginCommand cmd = getCmd(s);
+		return cmd == null ? null : cmd.getUsage();
 	}
-	public SBHelp() {                                                    
-		super("help");                                     
-		addDefaults(YamlConfiguration.loadConfiguration(getClass().getResourceAsStream("res/help.yml")));
-		options().copyDefaults(true);
-		save();
+	public static PluginCommand getCmd(String s) {
+		return SBUtils.getPlugin().getCommand("sbx_"+s);
 	}
 }

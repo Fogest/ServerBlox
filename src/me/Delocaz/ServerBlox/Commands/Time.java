@@ -3,11 +3,10 @@ package me.Delocaz.ServerBlox.Commands;
 import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
-import me.Delocaz.ServerBlox.ServerBlox;
 
 public class Time extends SBCmd {
-	public Time(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public Time(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) {
 		int time = 0;

@@ -4,11 +4,10 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
-import me.Delocaz.ServerBlox.ServerBlox;
 
 public class SetHome extends SBCmd {
-	public SetHome(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public SetHome(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) {
 		Location l = p.getLocation();

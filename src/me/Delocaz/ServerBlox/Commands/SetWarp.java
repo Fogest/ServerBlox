@@ -4,12 +4,11 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
-import me.Delocaz.ServerBlox.ServerBlox;
 import me.Delocaz.ServerBlox.Exceptions.WrongArgsException;
 
 public class SetWarp extends SBCmd {
-	public SetWarp(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public SetWarp(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) throws WrongArgsException {
 		Location l = p.getLocation();

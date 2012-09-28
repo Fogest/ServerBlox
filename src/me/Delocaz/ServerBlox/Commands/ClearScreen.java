@@ -4,12 +4,13 @@ import org.bukkit.entity.Player;
 
 import me.Delocaz.ServerBlox.SBCmd;
 
-public class Spawn extends SBCmd {
-	public Spawn(String cmd) {
+public class ClearScreen extends SBCmd {
+	public ClearScreen(String cmd) {
 		super(cmd);
 	}
 	public void player(Player p, String[] args) {
-		p.teleport(p.getWorld().getSpawnLocation());
-		p.sendMessage(lng.get("spawnTp"));
+		for (int i=0;i<100;i++) {
+			p.sendMessage("");
+		}
 	}
 }

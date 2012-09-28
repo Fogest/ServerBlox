@@ -6,12 +6,11 @@ import org.bukkit.inventory.ItemStack;
 
 import me.Delocaz.ServerBlox.SBCmd;
 import me.Delocaz.ServerBlox.SBUtils;
-import me.Delocaz.ServerBlox.ServerBlox;
 import me.Delocaz.ServerBlox.Exceptions.WrongArgsException;
 
 public class Item extends SBCmd {
-	public Item(String cmd, String perm, ServerBlox sb) {
-		super(cmd, perm, sb);
+	public Item(String cmd) {
+		super(cmd);
 	}
 	public void player(Player p, String[] args) throws WrongArgsException {
 		if (args.length == 0) {
@@ -30,6 +29,7 @@ public class Item extends SBCmd {
 			}
 		}
 		i.setAmount(am);
+		p.getInventory().addItem(i);
 		p.sendMessage(lng.get("itemAdd").replaceAll("%item", i.getAmount() + " " + i.getType().toString()));
 	}
 }
