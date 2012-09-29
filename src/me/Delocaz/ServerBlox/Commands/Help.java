@@ -12,7 +12,7 @@ public class Help extends SBCmd {
 		super(cmd);
 	}
 	public void player(Player p, String[] args) throws WrongArgsException {
-		p.sendMessage(SBUtils.colorize("&c==============="));
+		p.sendMessage(SBUtils.colorize(lng.get("splitter")));
 		if (args.length == 0) {
 			for (SBCmd cmd : sb.scr.cmds) {
 				if (p.hasPermission(cmd.perm)) {
@@ -30,6 +30,6 @@ public class Help extends SBCmd {
 			p.sendMessage(SBUtils.colorize("&a"+usa));
 			p.sendMessage(SBUtils.colorize("&c"+des.replaceAll(" \\(.*", "")));
 		}
-		p.sendMessage(SBUtils.colorize("&c==============="));
+		p.sendMessage(SBUtils.colorize(lng.get("splitter")));
 	}
 }

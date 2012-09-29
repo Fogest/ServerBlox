@@ -60,5 +60,6 @@ public class SBLang {
 		add("fakeOp", "&o&7[CONSOLE: Opped %player]");
 		add("errPrefix", "&cError:");
 		add("splitter", "&c===============");
+		add("playerIgnored", "&2You have ignored %player!");
 	}
 }                                                                        

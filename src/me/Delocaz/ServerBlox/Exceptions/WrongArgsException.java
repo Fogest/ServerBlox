@@ -15,6 +15,5 @@ public class WrongArgsException extends SBException {
 		p.sendMessage(SBUtils.colorize("&2")+SBHelp.getDesc(cmd.cmd));
 		p.sendMessage(SBUtils.colorize(SBUtils.getPlugin().lng.lng.get("errPrefix")+" "+error));
 		p.sendMessage(SBUtils.colorize(SBUtils.getPlugin().lng.lng.get("splitter")));
-
 	}
 }

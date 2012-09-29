@@ -104,3 +104,8 @@ commands:
         description: 'Spams you empty messages, essentially clearing your chat.'
         usage: '/clearscreen'
         permission: serverblox.chat.clear
+    sbx_ignore:
+        aliases: [ignore, stfu]
+        description: 'Ignores a player, making you not see their messages.'
+        usage: '/ignore <player>'
+        permission: serverblox.chat.ignore
