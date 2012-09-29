@@ -60,6 +60,10 @@ public class SBLang {
 		add("fakeOp", "&o&7[CONSOLE: Opped %player]");
 		add("errPrefix", "&cError:");
 		add("splitter", "&c===============");
-		add("playerIgnored", "&2You have ignored %player!");
+		add("playerIgnored", "&aYou have ignored %player!");
+		add("alreadyPlayer", "&cThat player is already online!");
+		add("altsOf", "&2Possible alternate accounts of %player:");
+		add("ipsOf", "&2IPs of %player:");
+		add("playersWithIP", "&2Players with %ip:");
 	}
 }                                                                        

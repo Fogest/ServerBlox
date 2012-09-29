@@ -1,1 +1,8 @@
-#Nothing!
+!Add space in array assembly
+!Add nick persistency
+!Fix time always setting to day
+
+#Weather
+#Banning system
+#Ban players bans IPs -> toggleable
+#Add nick on nameplate
